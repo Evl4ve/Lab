@@ -1,0 +1,30 @@
+import alphebet
+
+encrypt = input("Enter your message: ")
+key=3
+encrypted=""
+for letter in encrypt:
+    if letter in alphabet.latin:
+        position= alphabet.latin.find(letter)
+        newposition= position+key
+        if letter in alphebet.latin:
+            encrypted = encrypted +alphebet.latin[newposition]
+        else:
+            continue
+    elif letter in alphebet.kyrylica:
+        position = alphebet.kyrylica.find(letter)
+        newposition = position +key
+        if letter in alphabet.kyrylica:
+            encrypted = encrypted + alphebet.kyrylica[newposition]
+        else:
+            continue
+
+    elif letter in alphebet.numbers:
+        position = alphebet.numbers.find(letter)
+        newposition = position + key
+        if letter in alphebet.numbers:
+            encrypted = encrypted + alphebet.numbers[newposition]
+    else:
+        encrypted = encrypted + letter
+
+print("Encrypted message is:"+ encrypted)
